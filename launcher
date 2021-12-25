@@ -1,0 +1,15 @@
+#!/bin/bash
+# download docker on linux 
+apt-get update
+apt-get install -y docker docker.io
+systemctl enable docker
+systemctl start docker
+
+# install git
+apt-get install -y git
+mkdir /JLink && cd /JLink
+
+# login:    ObraztsovOleg (username)
+# password: (generate your tocken)
+git clone https://github.com/yurinbiz/project_watch.git
+docker pull fjmolinas/jlink
